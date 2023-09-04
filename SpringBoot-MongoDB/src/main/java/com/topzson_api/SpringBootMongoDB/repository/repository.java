@@ -1,9 +1,12 @@
-package repository;
+package com.topzson_api.SpringBootMongoDB.repository;
 import java.util.List;
+
 import org.springframework.data.mongodb.repository.MongoRepository;
-import model.model;
+
+import com.topzson_api.SpringBootMongoDB.model.model;
 
 public interface repository extends MongoRepository<model, String> {
     List<model> findByTitleContaining(String title);
     List<model> findByPublished(boolean published);
+
 }

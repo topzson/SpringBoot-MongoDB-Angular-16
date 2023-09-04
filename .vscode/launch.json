@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringBootMongoDbApplication<SpringBoot-MongoDB>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.topzson_api.SpringBootMongoDB.SpringBootMongoDbApplication",
+            "projectName": "SpringBoot-MongoDB",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -1,18 +1,16 @@
-package controller;
+package com.topzson_api.SpringBootMongoDB.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import repository.repository;
-import model.model;
+import com.topzson_api.SpringBootMongoDB.repository.repository;
+import com.topzson_api.SpringBootMongoDB.model.model;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
-import static model.model.*;
 
 @CrossOrigin(origins = "http://localhost:8081")
 @RestController
