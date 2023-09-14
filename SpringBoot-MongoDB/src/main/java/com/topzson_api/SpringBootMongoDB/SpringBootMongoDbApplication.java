@@ -2,9 +2,10 @@ package com.topzson_api.SpringBootMongoDB;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.reactive.config.EnableWebFlux;
 
-@SpringBootApplication(scanBasePackages = {
-		"com.topzson_api.repository", "com.topzson_api.SpringBootMongoDbApplication" })
+@EnableWebFlux
+@SpringBootApplication
 public class SpringBootMongoDbApplication {
 
 	public static void main(String[] args) {

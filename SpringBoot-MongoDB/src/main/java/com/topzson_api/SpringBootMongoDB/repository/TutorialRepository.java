@@ -1,13 +1,15 @@
 package com.topzson_api.SpringBootMongoDB.repository;
 
-import java.util.List;
-
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
+import org.springframework.stereotype.Repository;
 
 import com.topzson_api.SpringBootMongoDB.model.Tutorial;
 
-public interface TutorialRepository extends MongoRepository<Tutorial, String> {
-    List<Tutorial> findByTitleContaining(String title);
+import reactor.core.publisher.Flux;
 
-    List<Tutorial> findByPublished(boolean published);
+@Repository
+public interface TutorialRepository extends ReactiveMongoRepository<Tutorial, String> {
+  Flux<Tutorial> findByPublished(boolean published);
+
+  Flux<Tutorial> findByTitleContaining(String title);
 }
